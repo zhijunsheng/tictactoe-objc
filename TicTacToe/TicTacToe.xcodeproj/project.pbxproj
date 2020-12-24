@@ -14,6 +14,7 @@
 		074826AF259559870017DCE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074826AE259559870017DCE4 /* Assets.xcassets */; };
 		074826B2259559870017DCE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074826B0259559870017DCE4 /* LaunchScreen.storyboard */; };
 		074826B5259559870017DCE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 074826B4259559870017DCE4 /* main.m */; };
+		074826BE25955A950017DCE4 /* BoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 074826BD25955A950017DCE4 /* BoardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		074826B1259559870017DCE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		074826B3259559870017DCE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		074826B4259559870017DCE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		074826BC25955A950017DCE4 /* BoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardView.h; sourceTree = "<group>"; };
+		074826BD25955A950017DCE4 /* BoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				074826A6259559870017DCE4 /* SceneDelegate.m */,
 				074826A8259559870017DCE4 /* ViewController.h */,
 				074826A9259559870017DCE4 /* ViewController.m */,
+				074826BC25955A950017DCE4 /* BoardView.h */,
+				074826BD25955A950017DCE4 /* BoardView.m */,
 				074826AB259559870017DCE4 /* Main.storyboard */,
 				074826AE259559870017DCE4 /* Assets.xcassets */,
 				074826B0259559870017DCE4 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 				074826A4259559870017DCE4 /* AppDelegate.m in Sources */,
 				074826B5259559870017DCE4 /* main.m in Sources */,
 				074826A7259559870017DCE4 /* SceneDelegate.m in Sources */,
+				074826BE25955A950017DCE4 /* BoardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
