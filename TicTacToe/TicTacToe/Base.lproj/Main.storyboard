@@ -19,9 +19,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiU-fN-ryJ" customClass="BoardView">
                                 <rect key="frame" x="16" y="20" width="288" height="288"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xiU-fN-ryJ" secondAttribute="height" multiplier="1:1" id="F56-wO-HkC"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xcm-nq-eKA" appends="YES" id="IYm-Ty-Sag"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,8 +36,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xiU-fN-ryJ" secondAttribute="trailing" constant="16" id="bzR-jn-c24"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="boardView" destination="xiU-fN-ryJ" id="nkO-sS-JMk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xcm-nq-eKA">
+                    <connections>
+                        <action selector="dropPiece:" destination="BYZ-38-t0r" id="XCP-RD-Iao"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="112.5" y="126.25"/>
         </scene>
