@@ -9,16 +9,42 @@
 
 @implementation BoardView
 
+CGFloat squareSide = 100;
+CGFloat ratio = 0.6;
 
 - (void)drawRect:(CGRect)rect {
     NSLog(@"width = %f", rect.size.width);
+    squareSide = self.bounds.size.width / 3;
 
     [self drawBoard];
+    [self drawPieces];
+}
+
+- (void)drawPieces {
+    [self drawPieceAtCol:0 row:0 isX:false];
+    [self drawPieceAtCol:1 row:2 isX:true];
+}
+
+- (void)drawPieceAtCol:(int)col row:(int)row isX:(BOOL)isX {
+    CGFloat radius = 0.5 * ratio * squareSide;
+    CGFloat centerX = (0.5 + col) * squareSide;
+    CGFloat centerY = (0.5 + (2 - row)) * squareSide;
+    UIBezierPath *path = [[UIBezierPath alloc] init];
+    
+    if (isX) {
+        [path moveToPoint:CGPointMake(centerX - radius, centerY - radius)];
+        [path addLineToPoint:CGPointMake(centerX + radius, centerY + radius)];
+        [path moveToPoint:CGPointMake(centerX + radius, centerY - radius)];
+        [path addLineToPoint:CGPointMake(centerX - radius, centerY + radius)];
+    } else {
+        [path addArcWithCenter:CGPointMake(centerX, centerY) radius:radius startAngle:0 endAngle:2 *M_PI clockwise:true];
+        [[UIColor blueColor] set];
+    }
+    path.lineWidth = 5;
+    [path stroke];
 }
 
 - (void)drawBoard {
-    CGFloat squareSide = self.bounds.size.width / 3;
-    
     UIBezierPath *path = [[UIBezierPath alloc] init];
     
     for (int i = 0; i < 2; i++) {
