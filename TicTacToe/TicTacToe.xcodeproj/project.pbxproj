@@ -38,6 +38,7 @@
 		074826CF2596DD350017DCE4 /* Piece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Piece.m; sourceTree = "<group>"; };
 		074826D32596DDBE0017DCE4 /* TicTacToe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
 		074826D42596DDBE0017DCE4 /* TicTacToe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToe.m; sourceTree = "<group>"; };
+		074826D82596E4000017DCE4 /* TicTacToeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToeDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 		074826A1259559870017DCE4 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				074826D82596E4000017DCE4 /* TicTacToeDelegate.h */,
 				074826CE2596DD350017DCE4 /* Piece.h */,
 				074826CF2596DD350017DCE4 /* Piece.m */,
 				074826D32596DDBE0017DCE4 /* TicTacToe.h */,
