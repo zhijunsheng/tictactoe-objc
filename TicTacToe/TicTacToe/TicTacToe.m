@@ -10,6 +10,7 @@
 @implementation TicTacToe
 
 NSMutableSet *piecesBox;
+BOOL isX = true;
 
 - (instancetype)init
 {
@@ -21,7 +22,25 @@ NSMutableSet *piecesBox;
 }
 
 - (Piece *)pieceAtCol:(int)col row:(int)row {
+    for (Piece *piece in piecesBox) {
+        if (col == piece.col && row == piece.row) {
+            return piece;
+        }
+    }
     return nil;
+}
+
+- (void)dropPieceAtCol:(int)col row:(int)row {
+    if ([self pieceAtCol:col row:row] != nil) {
+        return;
+    }
+    
+    Piece *piece = [[Piece alloc] init];
+    piece.col = col;
+    piece.row = row;
+    piece.isX = isX;
+    [piecesBox addObject:piece];
+    isX = !isX;
 }
 
 @end

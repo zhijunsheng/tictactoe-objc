@@ -32,6 +32,8 @@
     int row = 2 - (int)(fingerTip.y / squareSide);
     
     NSLog(@"finger tip: (%d, %d)", col, row);
+    [self.ticTacToe dropPieceAtCol:col row:row];
+    [self.boardView setNeedsDisplay];
 }
 
 - (id)pieceAtCol:(int)col row:(int)row {

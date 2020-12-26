@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TicTacToe : NSObject
 
 - (Piece *)pieceAtCol:(int)col row:(int)row;
+- (void)dropPieceAtCol:(int)col row:(int)row;
 
 @end
 

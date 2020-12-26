@@ -21,8 +21,14 @@ CGFloat ratio = 0.6;
 }
 
 - (void)drawPieces {
-    [self drawPieceAtCol:0 row:0 isX:false];
-    [self drawPieceAtCol:1 row:2 isX:true];
+    for (int row = 0; row < 3; row++) {
+        for (int col = 0; col < 3; col++) {
+            Piece *piece = [self.ticTacToeDelegate pieceAtCol:col row:row];
+            if (piece != nil) {
+                [self drawPieceAtCol:col row:row isX:piece.isX];
+            }
+        }
+    }
 }
 
 - (void)drawPieceAtCol:(int)col row:(int)row isX:(BOOL)isX {
@@ -36,6 +42,7 @@ CGFloat ratio = 0.6;
         [path addLineToPoint:CGPointMake(centerX + radius, centerY + radius)];
         [path moveToPoint:CGPointMake(centerX + radius, centerY - radius)];
         [path addLineToPoint:CGPointMake(centerX - radius, centerY + radius)];
+        [[UIColor purpleColor] set];
     } else {
         [path addArcWithCenter:CGPointMake(centerX, centerY) radius:radius startAngle:0 endAngle:2 *M_PI clockwise:true];
         [[UIColor blueColor] set];
